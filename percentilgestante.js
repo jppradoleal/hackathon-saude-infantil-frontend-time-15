@@ -1,9 +1,7 @@
 function dmg_percentil(){
 
-    var select = document.getElementById('dmg-idadegestacional');
-	var ig = select.options[select.selectedIndex].value;
-
-    var peso = parseFloat(document.getElementById('dmg-peso').value);
+  var peso = parseFloat(document.getElementById('dmg-peso').value);
+  var ig = parseFloat(document.getElementById('ig-peso').value);
 
     listapeso = [
         [26,29,35,41,44], // 10 semanas
