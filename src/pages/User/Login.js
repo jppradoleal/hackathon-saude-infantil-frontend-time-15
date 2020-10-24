@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import api from '../../services/api';
 
@@ -7,18 +7,23 @@ import UserContext from '../../context/UserContext';
 
 import '../../styles/User/login.css';
 
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
+
 export default function Login() {
   const { setToken } = useContext(UserContext);
-  const [ email, setEmail ] = useState('');
+  const [ cpf, setCPF ] = useState('');
   const [ senha, setSenha ] = useState('');
-  const [ rememberMe, setRememberMe ] = useState(false);
+  const [ rg, setRG ] = useState('');
+  const [ cartaoSUS, setCartaoSUS ] = useState('');
+  const [ isParent, setIsParent ] = useState(true);
 
   const history = useHistory();
 
   function handleSubmit(event) {
     event.preventDefault();
     api.post('/user/login', {
-      email, senha
+      cpf, senha
     }).then(({data}) => {
       setToken(data.token);
       alert(data.message);
@@ -27,37 +32,80 @@ export default function Login() {
   }
   
   return (
+    <>
+    <Navbar />
     <div id="page-login">
-      <h1>Login</h1>
       <form onSubmit={handleSubmit} className="login-form">
-        <label htmlFor="email">Email *:</label>
-        <input 
-          type="email" 
-          id="email" 
-          value={email}
-          onChange={({target}) => setEmail(target.value)}
-        />
-        
-        <label htmlFor="senha">Senha *:</label>
-        <input 
-          type="password" 
-          id="senha" 
-          value={senha}
-          onChange={({target}) => setSenha(target.value)}
-        />
+        <legend>Caderneta Digital<br />da Saúde da Criança</legend>
 
-        <div>
-          <input 
-            type="checkbox" 
-            id="rememberMe"
-            value={rememberMe}
-            onChange={({target}) => setRememberMe(target.value)}
-          />
-          <label htmlFor="rememberMe"> Remember me</label>
+        <div className="controls">
+          <p 
+            className={isParent ? 'active' : ''}
+            onClick={() => setIsParent(true)}
+          >Pais ou responsáveis</p>
+          <p 
+            className={!isParent ? 'active' : ''}
+            onClick={() => setIsParent(false)}
+          >Profissional da Saúde</p>
         </div>
+        { isParent ? (
+          <>
+            <div className="form-group">
+              <label htmlFor="CPF">Digite seu CPF</label>
+              <input 
+                type="text" 
+                id="CPF" 
+                value={cpf}
+                onChange={({target}) => setCPF(target.value)}
+              />
+            </div>
+            
+            <div className="form-group">
+              <label htmlFor="senha">Digite sua senha
+              <small onClick={() => history.push('/forgot')}>Esqueci minha senha</small>
+              </label>
+              <input 
+                type="password" 
+                id="senha" 
+                value={senha}
+                onChange={({target}) => setSenha(target.value)}
+              />
+            </div>
+          </>
+        ) : (
+          <>
+            <h3>Preencha um dos campos para entrar</h3>
+            <div className="form-group">
+              <label htmlFor="RG">Número do RG da criança</label>
+              <input 
+                type="text" 
+                id="RG" 
+                value={rg}
+                onChange={({target}) => setRG(target.value)}
+              />
+            </div>
+            
+            <div className="form-group">
+              <label htmlFor="SUS">Número do Cartão do SUS</label>
+              <input 
+                type="text" 
+                id="SUS" 
+                value={cartaoSUS}
+                onChange={({target}) => setCartaoSUS(target.value)}
+              />
+            </div>
+          </>
+        )}
 
-        <button>Acessar!</button>
+        <button>Entrar</button>
       </form>
+
+      {isParent && (<div className="signup">
+        <p>Não possui cadastro?</p>
+        <Link to="/signup" className="link">Cadastre-se</Link>
+      </div>)}
     </div>
+    <Footer />
+    </>
   );
 }

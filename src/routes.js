@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import React, { useState, useContext } from 'react';
+import { BrowserRouter, Switch, Route, useHistory } from 'react-router-dom';
 
 import UserContext from './context/UserContext';
 
+import Home from './pages/Home';
 import Login from './pages/User/Login';
 import Signup from './pages/User/Signup';
 import Dashboard from './pages/Dashboard';
@@ -11,6 +12,16 @@ import DetailChildRegistry from './pages/ChildRegistry/DetailChildRegistry';
 import DeleteChildRegistry from './pages/ChildRegistry/DeleteChildRegistry';
 import UpdateChildRegistry from './pages/ChildRegistry/UpdateChildRegistry';
 
+function PrivateRoute(props) {
+  const { token } = useContext(UserContext);
+  const history = useHistory();
+  if(!token) 
+    history.push('/login');
+  
+  return (
+    <Route {...props} />
+  );
+}
 
 export default function Routes() {
 
@@ -20,13 +31,14 @@ export default function Routes() {
     <UserContext.Provider value={{token, setToken}}>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/login" component={Login} />
+          <Route exact path="/" component={Home} />
+          <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
-          <Route path="/dashboard" component={Dashboard} />
-          <Route path="/child/delete/:id" component={DeleteChildRegistry} />
-          <Route path="/child/update/:id" component={UpdateChildRegistry} />
-          <Route path="/child/:id" component={DetailChildRegistry} />
-          <Route path="/child" component={CreateChildRegistry} />
+          <PrivateRoute path="/dashboard" component={Dashboard} />
+          <PrivateRoute path="/child/delete/:id" component={DeleteChildRegistry} />
+          <PrivateRoute path="/child/update/:id" component={UpdateChildRegistry} />
+          <PrivateRoute path="/child/:id" component={DetailChildRegistry} />
+          <PrivateRoute path="/child" component={CreateChildRegistry} />
         </Switch>
       </BrowserRouter>
     </UserContext.Provider>
