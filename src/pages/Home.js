@@ -11,6 +11,9 @@ import '../styles/home.css';
 
 import calendarImg from '../images/undraw_calendar.svg';
 import calculatorImg from '../images/undraw_calculator.svg';
+import cartilhaImg from '../images/cartilha.png';
+import cardOneImg from '../images/image-card-2.png';
+import cardTwoImg from '../images/image-card-1.png';
 
 export default function Home() {
   const [posts, setPosts] = useState([])
@@ -26,19 +29,36 @@ export default function Home() {
       <Navbar />
       <main id="page-home">
         <section className="first-section">
-          {posts.map(post => {
-            return (
-              <div className="post-cell">
-                <img src={post.caminho_da_imagem} />
-                <div>
-                  <h4>{post.titulo}</h4>
-                  <p>{post.descricao}</p>
-                  <a>Leia mais{" "}
-                  <FiArrowRight size={16} color="#2846CA"/></a>
-                </div>
+          <div className="row">
+            <div>
+              <h1>Caderneta digital da saúde da criança</h1>
+              <p>Acompanhe o desenvolvimento saudável da criança e receba os melhores conteúdos sobre o assunto.</p>
+              <Link className="link" to="">Cadastrar</Link>
+            </div>
+            <img src={cartilhaImg} alt=""/>
+          </div>
+          <div className="row" style={{height: "70vh"}}>
+            <div className="card">
+              <img src={cardOneImg} alt="" />
+              <div>
+                <h4>Para pais e responsáveis</h4>
+                <p>Acompanhe a saúde e desenvolvimento do seu filho(a)</p>
+                <Link to="" className="text-link">
+                  Leia mais <FiArrowRight size={16} color="#2846CA" />
+                </Link>
               </div>
-            )
-          })}
+            </div>
+            <div className="card">
+              <img src={cardTwoImg} alt="" />
+              <div>
+                <h4>Para profissionais da saúde</h4>
+                <p>Registre e acompanhe as informações mais fácil.</p>
+                <Link to="" className="text-link">
+                  Leia mais <FiArrowRight size={16} color="#2846CA" />
+                </Link>
+              </div>
+            </div>
+          </div>
         </section>
         <section className="second-section">
           <h1>Funcionalidades</h1>

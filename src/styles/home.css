@@ -1,16 +1,86 @@
 .container {
-  width: 99%;
+  max-width: 99%;
   height: 100vh;
   margin: 0;
 }
 
 .container #page-home {
-  width: 75%;
+  max-width: 75%;
   margin: 0 auto;
 }
 
+.container #page-home .first-section {
+  margin: 150px auto;
+  margin-bottom: 0px;
+}
 .container #page-home .first-section .post-cell {
   display: flex;
+}
+
+.container #page-home .first-section .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container #page-home .first-section .row div{
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 16px;
+}
+
+.container #page-home .first-section .row div h1 {
+  font-size: 60px;
+  line-height: 60px;
+  color: #2846CA;
+}
+
+.container #page-home .first-section .row div p {
+  margin-top: 16px;
+}
+.container #page-home .first-section .row div .link{
+  padding: 15px 55px;
+  width: 192px;
+  margin-top: 16px;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  font-size: 18px;
+  background: #2846CA;
+  text-decoration: none;
+}
+
+.container #page-home .first-section .row .card{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+}
+
+.container #page-home .first-section .row .card h4{
+  font-size: 26px;
+  color: #2846CA;
+  letter-spacing: 0.15px;
+  line-height: 31.2px;
+}
+
+.container #page-home .first-section .row .card p{
+  line-height: 23.4px;
+  color: #2846CA;
+}
+
+.container #page-home .first-section .row .card .text-link{
+  color: #2846CA;
+  line-height: 28px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.container #page-home .first-section .row .card img{
+  height: 165px;
+  margin-right: 20px;
 }
 
 .container #page-home .second-section {
@@ -21,10 +91,10 @@
 .container #page-home .second-section::after {
   content: '';
   position: absolute;
-  bottom: -35%;
+  bottom: -105%;
   z-index: -1;
   left: 0;
-  width: 500px;
+  max-width: 500px;
   height: 450px;
   background: url('../images/circle.svg') no-repeat left bottom;
   background-size: contain;
@@ -60,7 +130,7 @@
 }
 
 .container #page-home .second-section .flex .text-description {
-  width: 34%;
+  max-width: 34%;
   margin-right: 137px;
 }
 .container #page-home .second-section .flex.reverse .text-description {
@@ -74,7 +144,7 @@
   align-items: center;
   justify-content: center;
   height: 70vh;
-  width: 60%;
+  max-width: 60%;
   margin: 100px auto;
 }
 .container #page-home .third-section h1 {
