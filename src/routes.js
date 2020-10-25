@@ -6,7 +6,8 @@ import UserContext from './context/UserContext';
 import Home from './pages/Home';
 import Login from './pages/User/Login';
 import Signup from './pages/User/Signup';
-import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/Dashboard/Dashboard';
+import DashboardData from './pages/Dashboard/DashboardData';
 import CreateChildRegistry from './pages/ChildRegistry/CreateChildRegistry';
 import DetailChildRegistry from './pages/ChildRegistry/DetailChildRegistry';
 import DeleteChildRegistry from './pages/ChildRegistry/DeleteChildRegistry';
@@ -34,6 +35,7 @@ export default function Routes() {
           <Route exact path="/" component={Home} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
+          <PrivateRoute path="/dashboard/data" component={DashboardData} />
           <PrivateRoute path="/dashboard" component={Dashboard} />
           <PrivateRoute path="/child/delete/:id" component={DeleteChildRegistry} />
           <PrivateRoute path="/child/update/:id" component={UpdateChildRegistry} />

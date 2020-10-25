@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
 import { FiArrowRight } from 'react-icons/fi';
 
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
-
-import api from '../services/api';
 
 import '../styles/home.css';
 
@@ -16,13 +14,6 @@ import cardOneImg from '../images/image-card-2.png';
 import cardTwoImg from '../images/image-card-1.png';
 
 export default function Home() {
-  const [posts, setPosts] = useState([])
-
-  useEffect(() => {
-    api.get('/posts?page=0&postsByPage=2').then(response => {
-      setPosts(response.data);
-    })
-  }, [])
 
   return (
     <div className="container">

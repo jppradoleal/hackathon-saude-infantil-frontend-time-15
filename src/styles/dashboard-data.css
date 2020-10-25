@@ -1,0 +1,44 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#page-chart {
+  padding-left: 316px;
+  padding-top: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#page-chart .chart-container {
+  width: 909px;
+}
+#page-chart .insert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 26px;
+  width: 80%;
+}
+#page-chart .insert form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-top: 16px;
+}
+
+
+#page-chart .insert form input {
+  height: 36px;
+  margin-right: 6px;
+  padding: 5px 15px;
+}
+#page-chart .insert form select {
+  height: 36px;
+  width: 50%;
+  margin:0;
+}

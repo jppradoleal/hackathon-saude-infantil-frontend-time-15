@@ -29,7 +29,7 @@ export default function Login() {
         setToken(data.token);
         alert(data.message);
         history.push('/dashboard');
-      }).catch(({response: {data}}) => alert(data.message));
+      }).catch((response) => alert(response?.data?.message));
     } else {
       api.get(`/child/detail`, { params: {
         csus,

@@ -1,0 +1,222 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#page-dashboard-register {
+  background: #F8F9FB;
+}
+
+#page-dashboard-register .register-section {
+  padding-left: 316px;
+  padding-top: 56px;
+  display: flex;
+}
+
+#page-dashboard-register .register-section h3{
+  font-size: 38px;
+  line-height: 48px;
+  margin-bottom: 14px;
+}
+
+#page-dashboard-register .register-section form {
+  padding: 24px;
+  background: #fff;
+  width: 614px;
+  box-shadow: 0px 2px 40px -13px rgba(57, 40, 166, 0.15);
+  border-radius: 5px;
+}
+
+#page-dashboard-register .register-section form h5 {
+  font-size: 18px;
+}
+#page-dashboard-register .register-section form {
+  margin-bottom: 24px;
+  margin-right: 24px;
+  position: relative;
+}
+
+#page-dashboard-register .register-section form .indicador{
+  position: absolute;
+  right: 27px;
+  top: 33px;
+  font-size: 14px;
+  color: #4a4a4a;
+}
+
+
+#page-dashboard-register .register-section form .form-group, .sub-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+#page-dashboard-register .register-section form .form-group.doubled {
+  flex-direction: row;
+  width:86%;
+}
+
+#page-dashboard-register .register-section form label{
+  font-size: 18px;
+  line-height:23.4px;
+  margin-bottom: 8px;
+}
+
+#page-dashboard-register .register-section form input, select{
+  width: 75%;
+  height: 56px;
+  border: 1px solid #BCBCBC;
+  padding: 5px 25px;
+}
+
+#page-dashboard-register .register-section form .button, button {
+  margin-top: 35px;
+  height: 49px;
+  padding: 5px 25px;
+  border: none;
+  outline: 0;
+  border-radius: 4px;
+  background: #2846CA;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  margin-right: 16px;
+}
+
+.less-important {
+  color: #4A4A4A;
+  background: #fff;
+  border: 1px solid #4A4A4A;
+  border-radius: 4px; 
+  padding: 5px 25px;
+}
+
+#page-dashboard-register .register-section form .radio-group {
+  width: 492px;
+}
+#page-dashboard-register .register-section form .radio-group .radios {
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 19.5px;
+}
+
+#page-dashboard-register .register-section form .radio-group:not(:first-of-type) {
+  margin-top: 32px;
+}
+
+#page-dashboard-register .register-section form .radio-group .radios div {
+  display: flex;
+  align-items: center;
+}
+#page-dashboard-register .register-section form .radio-group .radios div input {
+  width: 16px;
+  height: 16px;
+  margin-bottom: 8px;
+}
+
+#page-dashboard-register .register-section form .radio-group .radios div label {
+  color: #4A4A4A;
+  margin-left: 8px;
+}
+#page-dashboard-register .notas {
+  margin-top: 62px;
+  height: 145px;
+  width: 295px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0px 2px 40px -13px rgba(57, 40, 166, 0.15);
+  border-radius: 5px;
+}
+
+#page-dashboard-register .notas p {
+  margin-top: 16px;
+  position: relative;
+  padding-left: 26px;
+}
+
+#page-dashboard-register .notas p span.circle {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  border: 1px solid #BCBCBC;
+}
+
+#page-dashboard-register .notas p.active {
+  color: #39C82C;
+}
+
+#page-dashboard-register .notas p.active span.circle {
+  background: url('../images/check.svg') no-repeat center center;
+  background-size: contain;
+  border: 0;
+}
+
+#page-dashboard-register .posts-section {
+  padding-left: 316px;
+  padding-right: 36px;
+  padding-top: 56px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+#page-dashboard-register .posts-section .posts {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 23px;
+  margin-bottom: 69px;
+}
+
+#page-dashboard-register .posts-section .posts .post-card{
+  width: 295px;
+  height: 137px;
+  padding: 20px;
+  box-shadow: 0px 2px 40px -13px rgba(57, 40, 166, 0.15);
+  border-radius: 5px;
+}
+
+#page-dashboard-register .posts-section .posts .post-card h5 {
+  font-size: 18px;
+  line-height: 150%;
+}
+
+#page-dashboard-register .posts-section .posts .post-card .a-link {
+  position: relative;
+  top: 20px;
+  font-size: 18px;
+  color: #2958E5;
+  text-decoration: none;
+}
+/* #region */
+#page-dashboard-register .react-datepicker__day-names {
+  opacity: 0;
+  height: 10px;
+}
+#page-dashboard-register .react-datepicker__day--outside-month {
+  opacity: 0.3;
+}
+
+#page-dashboard-register .react-datepicker__header, .react-datepicker__day--selected {
+  background: #2846CA;
+}
+
+#page-dashboard-register .react-datepicker__current-month {
+  color: white;
+}
+
+#page-dashboard-register .react-datepicker__triangle {
+  border-bottom-color: #2846CA;
+}
+
+#page-dashboard-register .react-datepicker__year-select{
+  height: 26px;
+  font-size: 14px;
+}
+
+/* #endregion */

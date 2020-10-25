@@ -1,0 +1,36 @@
+#sidebar {
+  width: 286px;
+  padding-top: 86px;
+  height: 100vh;
+  box-shadow: 4px 0px 16px rgba(16, 30, 115, 0.08);
+  padding: 86px 0;
+  position: fixed;
+}
+
+#sidebar nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#sidebar nav .link {
+  height: 48px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  text-decoration: none;
+  color: #52575C;
+  font-weight: 500;
+  padding: 14px 0;
+  padding: 0 23px;
+  cursor: pointer;
+}
+
+#sidebar nav hr {
+  margin: 8px 0;
+  border: 1px solid #E8E8E8;
+}
+
+#sidebar nav .link .icon {
+  margin-right: 12px;
+}

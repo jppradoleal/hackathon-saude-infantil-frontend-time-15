@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;500&display=swap');
 
 * {
   padding: 0;
@@ -7,8 +7,13 @@
 }
 
 input, button, select, body {
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   font-size: 18px;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', serif;
 }
 
 body {
