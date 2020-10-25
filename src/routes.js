@@ -37,7 +37,7 @@ export default function Routes() {
           <PrivateRoute path="/dashboard" component={Dashboard} />
           <PrivateRoute path="/child/delete/:id" component={DeleteChildRegistry} />
           <PrivateRoute path="/child/update/:id" component={UpdateChildRegistry} />
-          <PrivateRoute path="/child/:id" component={DetailChildRegistry} />
+          <Route path="/child/:id" component={DetailChildRegistry} />
           <PrivateRoute path="/child" component={CreateChildRegistry} />
         </Switch>
       </BrowserRouter>

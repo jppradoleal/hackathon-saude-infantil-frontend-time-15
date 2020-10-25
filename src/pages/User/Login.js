@@ -15,20 +15,29 @@ export default function Login() {
   const [ cpf, setCPF ] = useState('');
   const [ senha, setSenha ] = useState('');
   const [ rg, setRG ] = useState('');
-  const [ cartaoSUS, setCartaoSUS ] = useState('');
+  const [ csus, setCSUS ] = useState('');
   const [ isParent, setIsParent ] = useState(true);
 
   const history = useHistory();
 
   function handleSubmit(event) {
     event.preventDefault();
-    api.post('/user/login', {
-      cpf, senha
-    }).then(({data}) => {
-      setToken(data.token);
-      alert(data.message);
-      history.push('/dashboard');
-    }).catch(({response: {data}}) => alert(data.message));
+    if(isParent) {
+      api.post('/user/login', {
+        cpf, senha
+      }).then(({data}) => {
+        setToken(data.token);
+        alert(data.message);
+        history.push('/dashboard');
+      }).catch(({response: {data}}) => alert(data.message));
+    } else {
+      api.get(`/child/detail`, { params: {
+        csus,
+        rg
+      }}).then(({data}) => {
+        console.log(data);
+      });
+    }
   }
   
   return (
@@ -90,8 +99,8 @@ export default function Login() {
               <input 
                 type="text" 
                 id="SUS" 
-                value={cartaoSUS}
-                onChange={({target}) => setCartaoSUS(target.value)}
+                value={csus}
+                onChange={({target}) => setCSUS(target.value)}
               />
             </div>
           </>

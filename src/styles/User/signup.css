@@ -1,13 +1,133 @@
+
 #page-signup {
-  width: 100vw;
-  height: 100vh;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 90px;
+}
+
+#page-signup h1 {
+  text-align: center;
+  font-size: 48px;
+
+}
+#page-signup h4 {
+  margin-top: 24px;
+  font-size: 26px;
+}
+
+#page-signup p {
+  margin-top: 16px;
 }
 
 #page-signup .form-signup {
   display: flex;
   flex-direction: column;
+  margin-top: 35px;
+}
+
+#page-signup .form-signup legend{
+  font-size: 42px;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 32px;
+}
+#page-signup .form-signup h3 {
+  margin-top: 52px;
+}
+
+#page-signup .form-signup .form-group {
+  position: relative;
+}
+
+#page-signup .form-signup .form-group, .form-group-doubled {
+  margin-top: 29px;
+  width: 475px;
+}
+
+#page-signup .form-signup .form-group-doubled {
+  display: flex;
+  justify-content:space-between;
+  width: 475px;
+}
+
+#page-signup .form-signup .form-group-doubled .sub-form-group {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+}
+
+#page-signup .form-signup .form-group-doubled .sub-form-group input {
+  width: 100%;
+}
+
+#page-signup .form-signup .form-group-doubled .sub-form-group:not(:first-child) {
+  width: 55%;
+}
+
+#page-signup .form-signup input, select{
+  border: none;
+  outline: 0;
+  background: #F4F5F4;
+  width: 100%;
+  height: 56px;
+  padding: 5px 15px;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+#page-signup .form-signup .form-group .react-datepicker-wrapper{
+  width: 100%;
+  flex: 1;
+}
+
+#page-signup .form-signup .submit-button {
+  margin-top: 25px;
+  height: 49px;
+  width: 100%;
+  border: none;
+  outline: 0;
+  border-radius: 4px;
+  background: #2846CA;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#page-signup .form-signup .submit-button:hover {
+  opacity: 0.9;
+}
+
+#page-signup .link{
+  text-decoration: none;
+  margin-top: 4px;
+  color: #2846CA;
+}
+
+#page-signup .react-datepicker__day-names {
+  opacity: 0;
+  height: 10px;
+}
+#page-signup .react-datepicker__day--outside-month {
+  opacity: 0.3;
+}
+
+#page-signup .react-datepicker__header, .react-datepicker__day--selected {
+  background: #2846CA;
+}
+
+#page-signup .react-datepicker__current-month {
+  color: white;
+}
+
+#page-signup .react-datepicker__triangle {
+  border-bottom-color: #2846CA;
+}
+
+#page-signup .react-datepicker__year-select{
+  height: 26px;
+  font-size: 14px;
 }
