@@ -2,7 +2,7 @@
 
 ## 👩‍👩‍👧‍👧 Integrantes:
 |<img src="readmeFiles/pics/fernandapp.jpg" width="100" />|<img src="readmeFiles/pics/joaopp.jpg" width="100" />|<img src="readmeFiles/pics/solpp.jpg" width="100" />|<img src="readmeFiles/pics/mikael.png" width="100" />|
-|---|---|---|---|---|
+|---|---|---|---|
 |[Febing20](https://github.com/febing20)|[Joao Prado](https://github.com/jppradoleal)|[Paula Campos](https://github.com/Paulacamposro)|Mikael França|
 <br />
 
