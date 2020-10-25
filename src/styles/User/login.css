@@ -10,6 +10,7 @@
 #page-login form {
   display: flex;
   flex-direction: column;
+  margin-top: 90px;
 }
 
 #page-login form .controls {
@@ -24,6 +25,9 @@
   margin-left: 35px;
 }
 
+#page-login form .controls p.inactive {
+  opacity: 0.5;
+}
 #page-login form .controls p.active {
   padding-bottom: 2px;
   border-bottom: solid 3px #2846CA;
@@ -36,7 +40,7 @@
   margin-bottom: 32px;
 }
 #page-login form h3 {
-  margin-top: 35px;
+  margin-top: 52px;
 }
 
 #page-login form .form-group {
@@ -44,7 +48,8 @@
 }
 
 #page-login form .form-group {
-  margin-top: 25px;
+  margin-top: 29px;
+  width: 475px;
 }
 
 #page-login form .form-group small{
@@ -52,29 +57,32 @@
   color: #777;
   right: 0;
   line-height: 18px;
+  font-size: 14px;
 }
 
 #page-login form input {
   border: none;
   outline: 0;
-  background: #eee;
+  background: #F4F5F4;
   width: 100%;
-  height: 36px;
+  height: 56px;
+  padding: 5px 15px;
+  font-size: 18px;
   border-radius: 5px;
   margin-top: 5px;
 }
 
 #page-login form button {
   margin-top: 25px;
-  height: 36px;
+  height: 49px;
   width: 100%;
   border: none;
   outline: 0;
-  border-radius: 5px;
+  border-radius: 4px;
   background: #2846CA;
   color: white;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 #page-login form button:hover {

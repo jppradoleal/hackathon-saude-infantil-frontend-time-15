@@ -1,6 +1,6 @@
 #navbar {
   width: 100vw;
-  padding: 15px 200px;
+  padding: 10px 236px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,11 +20,20 @@
   margin-left: 25px;
 }
 
+#navbar .user-controls .link {
+  font-size: 14px;
+}
+
 #navbar .user-controls .link:not(:first-child) {
+  
+  width: 77px;
+  height: 34px;
+  text-decoration: none;
+  background: #2846CA;
+  color: white;
+  border-radius: 4px;
+
   margin-left: 30px;
-  border-radius: 5px;
-  border: solid black 2px;
-  padding: 5px 5px;
-  color: black;
+  padding: 8px;
   text-decoration: none;
 }

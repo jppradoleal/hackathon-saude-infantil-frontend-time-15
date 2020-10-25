@@ -40,11 +40,11 @@ export default function Login() {
 
         <div className="controls">
           <p 
-            className={isParent ? 'active' : ''}
+            className={isParent ? 'active' : 'inactive'}
             onClick={() => setIsParent(true)}
           >Pais ou responsáveis</p>
           <p 
-            className={!isParent ? 'active' : ''}
+            className={!isParent ? 'active' : 'inactive'}
             onClick={() => setIsParent(false)}
           >Profissional da Saúde</p>
         </div>
@@ -76,7 +76,7 @@ export default function Login() {
           <>
             <h3>Preencha um dos campos para entrar</h3>
             <div className="form-group">
-              <label htmlFor="RG">Número do RG da criança</label>
+              <label htmlFor="RG">Número do Registro Civil de Nascimento da criança</label>
               <input 
                 type="text" 
                 id="RG" 
@@ -98,12 +98,12 @@ export default function Login() {
         )}
 
         <button>Entrar</button>
+        {isParent && (<div className="signup">
+          <p>Não possui cadastro?</p>
+          <Link to="/signup" className="link">Cadastre-se</Link>
+        </div>)}
       </form>
 
-      {isParent && (<div className="signup">
-        <p>Não possui cadastro?</p>
-        <Link to="/signup" className="link">Cadastre-se</Link>
-      </div>)}
     </div>
     <Footer />
     </>

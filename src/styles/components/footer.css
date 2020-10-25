@@ -5,6 +5,7 @@
   padding: 50px 0;
   border-top: solid 2px #ccc;
   background-color: #fff;
+  margin-top: 300px;
 }
 
 #footer div {
@@ -20,11 +21,17 @@
 
 #footer div h2 {
   margin-bottom: 15px;
+  font-family: 'Merriweather';
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
 }
 
 #footer div .link {
   color: black;
-  margin-top: 10px;
+  margin-top: 8px;
   text-decoration: none;
   font-size: 18px;
+  line-height: 23.4px;
+  letter-spacing: 0.15px;
 }
