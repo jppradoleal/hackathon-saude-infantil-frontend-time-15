@@ -322,7 +322,13 @@ export default function Dashboard() {
                   return (
                     <div className="post-card" key={post._id}>
                       <h5>{post.titulo}</h5>
-                      <a href={post.link} rel="noreferrer noopener" className="a-link">Leia mais &gt;</a>
+                      <a 
+                        href={post.link} 
+                        rel="noreferrer noopener" 
+                        className="a-link"
+                        rel="noopener noreferrer"
+                        target="_blank"  
+                      >Leia mais &gt;</a>
                     </div>
                   )
                 })}

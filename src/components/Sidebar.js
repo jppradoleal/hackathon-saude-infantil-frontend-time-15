@@ -44,11 +44,19 @@ export default function Sidebar() {
           <MdPersonOutline size={16} color="#4a4a4a" className="icon"/>
           Meus dados
         </Link>
-        <Link className="link">
+        <Link className="link" 
+          to="https://aps.bvs.br/apps/calculadoras/?page=7"
+          rel="noopener noreferrer"
+          target="_blank"  
+        >
           <MdInsertChart size={16} color="#4a4a4a" className="icon"/>
           Calculadoras
         </Link>
-        <Link className="link">
+        <Link className="link" 
+          to="https://pebmed.com.br/veja-o-calendario-vacinal-do-ministerio-da-saude-para-2020/"
+          rel="noopener noreferrer"
+          target="_blank"  
+        >
           <AiOutlineCalendar size={16} color="#4a4a4a" className="icon"/>
           Calendário de Vacinação
         </Link>

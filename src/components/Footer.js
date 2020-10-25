@@ -16,8 +16,18 @@ export default function Footer() {
       </div>
       <div>
         <h2>Calculadoras</h2>
-        <Link className="link" to="">Calculadoras IMC</Link>
-        <Link className="link" to="">Antropométrico</Link>
+        <Link 
+          className="link" 
+          to="https://endocalc.com.br/IMC.html"
+          rel="noopener noreferrer"
+          target="_blank"  
+        >Calculadoras IMC</Link>
+        <Link 
+          className="link" 
+          to="https://endocalc.com.br/dmgpercentilpeso.html"
+          rel="noopener noreferrer"
+          target="_blank"  
+        >Antropométrico</Link>
       </div>
       <div>
         <h2>Materiais</h2>
