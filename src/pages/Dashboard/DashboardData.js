@@ -1,9 +1,11 @@
-import React /*, { useEffect, useState, useContext } */ from 'react';
+import React, { useState } from 'react';
 // import UserContext from '../../context/UserContext';
 // import api from '../../services/api';
 import { Line } from 'react-chartjs-2';
 
 import Sidebar from '../../components/Sidebar';
+
+import api from '../../services/api';
 
 import '../../styles/dashboard-data.css';
 
