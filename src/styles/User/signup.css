@@ -55,7 +55,7 @@
 #page-signup .form-signup .form-group-doubled .sub-form-group {
   display: flex;
   flex-direction: column;
-  max-width: 35%;
+  max-width: 50%;
 }
 
 #page-signup .form-signup .form-group-doubled .sub-form-group input {
@@ -63,7 +63,7 @@
 }
 
 #page-signup .form-signup .form-group-doubled .sub-form-group:not(:first-child) {
-  max-width: 55%;
+  width: 100%;
 }
 
 #page-signup .form-signup input, select{
@@ -79,7 +79,7 @@
 }
 
 #page-signup .form-signup .form-group .react-datepicker-wrapper{
-  max-width: 100%;
+  width: 100%;
   flex: 1;
 }
 
@@ -129,4 +129,18 @@
 #page-signup .react-datepicker__year-select{
   height: 26px;
   font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  #page-signup .form-signup {
+    padding: 0 16px;
+  }
+  #page-signup .form-signup .form-group-doubled .sub-form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  #page-signup .form-signup .form-group-doubled .sub-form-group:not(:first-child) {
+    width: 100%;
+  }
 }

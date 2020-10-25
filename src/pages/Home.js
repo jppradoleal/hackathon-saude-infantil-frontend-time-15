@@ -37,7 +37,7 @@ export default function Home() {
             </div>
             <img src={cartilhaImg} alt=""/>
           </div>
-          <div className="row" style={{height: "70vh"}}>
+          <div className="row cards" style={{height: "70vh"}}>
             <div className="card">
               <img src={cardOneImg} alt="" />
               <div>

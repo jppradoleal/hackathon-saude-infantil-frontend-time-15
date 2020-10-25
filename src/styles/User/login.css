@@ -49,7 +49,7 @@
 
 #page-login form .form-group {
   margin-top: 29px;
-  width: 475px;
+  max-width: 475px;
 }
 
 #page-login form .form-group small{

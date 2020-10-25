@@ -36,3 +36,9 @@
   padding: 8px;
   text-decoration: none;
 }
+
+@media (max-width: 480px) {
+  #navbar {
+    display: none;
+  }
+}
