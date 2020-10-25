@@ -326,7 +326,6 @@ export default function Dashboard() {
                         href={post.link} 
                         rel="noreferrer noopener" 
                         className="a-link"
-                        rel="noopener noreferrer"
                         target="_blank"  
                       >Leia mais &gt;</a>
                     </div>
