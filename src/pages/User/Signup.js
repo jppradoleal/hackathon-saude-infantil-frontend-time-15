@@ -158,7 +158,7 @@ export default function Signup() {
           <div className="form-group">
             <label htmlFor="senha">Digite sua senha</label>
             <input 
-              type="text" 
+              type="password" 
               id="senha" 
               value={senha}
               onChange={({target}) => setSenha(target.value)}
@@ -168,7 +168,7 @@ export default function Signup() {
           <div className="form-group">
             <label htmlFor="confirmarSenha">Confirme sua senha</label>
             <input 
-              type="text" 
+              type="password" 
               id="confirmarSenha" 
               value={confirmarSenha}
               onChange={({target}) => setConfirmarSenha(target.value)}

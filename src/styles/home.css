@@ -1,0 +1,94 @@
+.container {
+  width: 99%;
+  height: 100vh;
+  margin: 0;
+}
+
+.container #page-home {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.container #page-home .first-section .post-cell {
+  display: flex;
+}
+
+.container #page-home .second-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container #page-home .second-section::after {
+  content: '';
+  position: absolute;
+  bottom: -35%;
+  z-index: -1;
+  left: 0;
+  width: 500px;
+  height: 450px;
+  background: url('../images/circle.svg') no-repeat left bottom;
+  background-size: contain;
+}
+
+.container #page-home .second-section h1 {
+  margin-bottom: 71px;
+  font-size: 48px;
+}
+
+.container #page-home .second-section .flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container #page-home .second-section .flex h3 {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 48px;
+}
+
+.container #page-home .second-section .flex p {
+  margin-top: 8px;
+  font-family: Roboto;
+  line-height: 23.4px;
+  font-size: 18px;
+}
+
+.container #page-home .second-section .flex.reverse {
+  flex-direction: row-reverse;
+  margin-top: 66px;
+}
+
+.container #page-home .second-section .flex .text-description {
+  width: 34%;
+  margin-right: 137px;
+}
+.container #page-home .second-section .flex.reverse .text-description {
+  margin-left: 137px;
+  margin-right: 0;
+}
+
+.container #page-home .third-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  width: 60%;
+  margin: 100px auto;
+}
+.container #page-home .third-section h1 {
+  font-size: 48px;
+  text-align: center;
+}
+
+.container #page-home .third-section .link {
+  padding: 15px 55px;
+  margin-top: 46px;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  font-size: 18px;
+  background: #2846CA;
+  text-decoration: none;
+}

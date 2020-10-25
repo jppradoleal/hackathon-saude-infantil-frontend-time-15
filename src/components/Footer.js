@@ -8,16 +8,22 @@ export default function Footer() {
     <footer id="footer">
       <div>
         <h2>Sobre</h2>
-        <Link className="link">Publicidade</Link>
-        <Link className="link">Imprensa</Link>
-        <Link className="link">Política de Privacidade</Link>
-        <Link className="link">Termos de uso</Link>
-        <Link className="link">Ajuda</Link>
+        <Link className="link" to="">Publicidade</Link>
+        <Link className="link" to="">Imprensa</Link>
+        <Link className="link" to="">Política de Privacidade</Link>
+        <Link className="link" to="">Termos de uso</Link>
+        <Link className="link" to="">Ajuda</Link>
       </div>
       <div>
         <h2>Calculadoras</h2>
-        <Link className="link">Calculadoras IMC</Link>
-        <Link className="link">Antropométrico</Link>
+        <Link className="link" to="">Calculadoras IMC</Link>
+        <Link className="link" to="">Antropométrico</Link>
+      </div>
+      <div>
+        <h2>Materiais</h2>
+        <Link className="link" to="">Estimulando o desenvolvimento</Link>
+        <Link className="link" to="">Alimentação saudável</Link>
+        <Link className="link" to="">Cuidados com a criança</Link>
       </div>
     </footer>
   );

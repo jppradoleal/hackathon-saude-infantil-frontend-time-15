@@ -1,12 +1,11 @@
 #navbar {
-  width: 100vw;
+  width: 100%;
   padding: 10px 236px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
-  top: 0;
   border-bottom: solid 2px #ccc;
+  background: white;
 }
 
 #navbar .link {
