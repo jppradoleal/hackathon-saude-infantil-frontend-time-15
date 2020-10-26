@@ -176,6 +176,7 @@
     
   .container #page-home {
     width: 100%;
+    padding: 0 10px;
   }
 
   .container #page-home .second-section .flex {
