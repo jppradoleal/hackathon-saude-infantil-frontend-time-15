@@ -143,4 +143,7 @@
   #page-signup .form-signup .form-group-doubled .sub-form-group:not(:first-child) {
     width: 100%;
   }
+  #page-signup .form-signup .form-group-doubled .sub-form-group {
+    max-width: 100%;
+  }
 }
